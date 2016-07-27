@@ -1,0 +1,21 @@
+{
+  "name": "rss-reader",
+  "version": "1.0.0",
+  "description": "process rss feeds and send the latest one to slack bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rss"
+  ],
+  "author": "Shunzhe Yu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.74.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.0"
+  }
+}
