@@ -5,7 +5,7 @@ var app = express();
 var port = 3010;
 var feedURL = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=-1&q=http://feeds.bbci.co.uk/news/rss.xml"
 
-app.get('/', function(req, res){
+app.get('/rss', function(req, res){
 	var mostRecentFeeds = []
 
 	var updateFeeds = function(){
