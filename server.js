@@ -5,7 +5,7 @@ var slack = new Slack('https://hooks.slack.com/services/T1Q8UAHNH/B1UL3PVV5/abm8
 
 var app = express();
 var port = 3010;
-var feedURL = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=-1&q=http://feeds.bbci.co.uk/news/rss.xml"
+var feedURL = "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=-1&q=http://feeds.feedburner.com/zhihu-daily"
 
 app.get('/rss', function(req, res){
 	var mostRecentFeeds = []
