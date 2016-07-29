@@ -1,5 +1,7 @@
-var request = require('request');
 var express = require('express');
+var Slack = require('node-slack');
+
+var slack = new Slack('https://hooks.slack.com/services/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');
 
 var app = express();
 var port = 3010;
@@ -38,12 +40,8 @@ app.get('/rss', function(req, res){
 						if(mostRecentFeeds.length > 0){
 							// forwards latest feeds to slack bot.
 							for(var i=0; i<mostRecentFeeds.length; i++){
-								request.post({
-								  url: 'https://hooks.slack.com/services/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',
-								  headers: {'content-type' : 'application/json'},
-								  data: {'text' : mostRecentFeeds[i]['title'] + ' ' + mostRecentFeeds[i]['link']}
-								}, function(error, response, body){
-								  console.log(body);
+								slack.send({
+									text: mostRecentFeeds[i]['title'] + ' ' + mostRecentFeeds[i]['link']
 								});
 							}
 						}

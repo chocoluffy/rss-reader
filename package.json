@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
+    "node-slack": "0.0.7",
     "request": "^2.74.0"
   },
   "devDependencies": {
