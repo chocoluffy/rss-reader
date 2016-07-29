@@ -1,7 +1,7 @@
 var express = require('express');
 var Slack = require('node-slack');
 
-var slack = new Slack('https://hooks.slack.com/services/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');
+var slack = new Slack('https://hooks.slack.com/services/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');
 
 var app = express();
 var port = 3010;
