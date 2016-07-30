@@ -51,7 +51,7 @@ app.get('/rss', function(req, res){
 						// init mostRecentFeeds array.
 						mostRecentFeeds = data;
 					}
-					console.log(mostRecentFeeds);
+					console.log(new Date(), mostRecentFeeds);
 				}
 			}
 		})
