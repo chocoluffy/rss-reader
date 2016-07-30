@@ -28,7 +28,7 @@ app.get('/rss', function(req, res){
 						var stopIndex = 0;
 						for(var i=0; i<data.length; i++){
 							if(data[i]['title'].localeCompare(mostRecentTitle) == 0){
-								// no update yet.
+								// no updateate yet.
 								break;
 							}
 							else{
@@ -36,7 +36,7 @@ app.get('/rss', function(req, res){
 							}
 						}
 						// update mostRecentFeeds with data sliced till stopIndex.
-						mostRecentFeeds = data.slice(0, stopIndex);
+						mostRecentFeeds = data.slice(0, stopIndex + 1);
 
 						if(mostRecentFeeds.length > 0){
 							// forwards latest feeds to slack bot.
